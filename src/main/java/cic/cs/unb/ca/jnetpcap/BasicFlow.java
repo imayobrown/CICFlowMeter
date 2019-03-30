@@ -1230,6 +1230,9 @@ public class BasicFlow {
     		dump.append(0).append(separator);
     	}
 
+        dump.append(flowStartTime).append(separator);
+        dump.append(flowLastSeen).append(separator);
+
         dump.append(getLabel());
 
     	

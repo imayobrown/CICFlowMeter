@@ -93,6 +93,8 @@ public enum FlowFeature {
     idl_std("Idle Std","IlSD"),					//82
     idl_max("Idle Max","IlMA"),					//83
     idl_min("Idle Min","IlMI"),					//84
+    first_seen("Flow First Seen", "FFS"),
+    last_seen("Flow Last Seen", "FLS"),
 	
 	Label("Label","LBL",new String[]{"CIC"});					//85
 
