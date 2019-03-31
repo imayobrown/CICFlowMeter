@@ -1,0 +1,11 @@
+#!/bin/bash
+
+IDENTITY_FILE=$1
+CIC_FLOW_METER_ZIP=CICFlowMeter-4.0.zip
+EC2_USER=ec2-user
+ML_SERVER_HOSTNAME=ec2-54-224-12-1.compute-1.amazonaws.com
+ML_SERVER_DIR=/home/ec2-user/mlserver
+
+scp -i ${IDENTITY_FILE} ./build/distributions/${CIC_FLOW_METER_ZIP} ${EC2_USER}@${ML_SERVER_HOSTNAME}:${ML_SERVER_DIR}/${CIC_FLOW_METER_ZIP}
+
+ssh -i ${IDENTITY_FILE} ${EC2_USER}@${ML_SERVER_HOSTNAME} "cd ${ML_SERVER_DIR}; unzip ${CIC_FLOW_METER_ZIP}"
